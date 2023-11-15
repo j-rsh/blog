@@ -5,6 +5,7 @@ import { Avatar, Box, Container, Grid, Typography } from "@mui/material";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import sanitizeHtml from "sanitize-html";
 import CommentForm from "../comment/CommentForm";
+import Comments from "../comment/Comments";
 
 const BlogPage = () => {
   const { sluge } = useParams();
@@ -50,6 +51,9 @@ const BlogPage = () => {
         </Grid>
         <Grid item xs={12}>
           <CommentForm slug={sluge}/>
+        </Grid>
+        <Grid item xs={12}>
+          <Comments slug={sluge}/>
         </Grid>
       </Grid>
     </Container>
